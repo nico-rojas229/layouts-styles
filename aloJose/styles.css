@@ -1,0 +1,302 @@
+:root {
+    --clr-bg : #2B5178;
+    --clr-bg-2: #D84835;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--clr-bg);
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.card-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 12em;
+    width: 400px;
+    border-radius: 30px;
+    background: linear-gradient(rgba(43, 81, 120, 0.2), rgba(39, 52, 86, 0.9)), url('home-card.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.card-2 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 12em;
+    width: 400px;
+    border-radius: 30px;
+    border: white 0.175rem solid;
+    background: linear-gradient(rgba(249, 99, 82, 0.4), rgba(216, 72, 53, 0.7)), url('home-card.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.card-3 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 12em;
+    width: 400px;
+    border-radius: 30px;
+    border: white 0.175rem solid;
+    background: linear-gradient(rgba(249, 99, 82, 0.6), rgba(39, 52, 86, 0.9)), url('home-card.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.letters {
+    padding-top: 5rem;
+    padding-left: 1rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.letters p {
+    color: var(--clr-bg);
+}
+
+.color-wrapper {
+    background-color: var(--clr-bg-2);
+    height: 2.5rem;
+    width: 7rem;
+    opacity: .9;
+    position: absolute;
+    left: 0;
+    top: 5rem;
+}
+
+.circle {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    left: 5rem;
+    top: 1rem;
+    border-radius: 50%;
+    border: #D84835 0.175rem solid;
+}
+
+.circle .small-circle {
+    height: 1rem;
+    width: 1rem;
+    background-color: #D84835;
+    border-radius: 50%;
+    position: absolute;
+    left: 15%;
+    top: 15%;
+
+}
+
+@keyframes animatedIntro {
+    from {
+        opacity: 0;
+        transform: scale(0) ;
+        background: rgba(39, 52, 86, 0.5);
+        width: 0%;
+        height: 0%;
+        filter: grayscale(0);
+    } to {
+        opacity: .9;
+        transform: scale(100%) ;
+        background: rgba(39, 52, 86, 0.3);
+        width: 100%;
+        height: 100%;
+        filter: grayscale(1rem);
+    }
+}
+
+
+.card::before {
+    content: "";
+    background: var(--clr-bg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card:hover::before {
+    animation: animatedIntro 700ms ease;
+}
+
+/* nuevo loader */
+
+
+
+.spinner {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      margin: auto;
+      left: 16%;
+      bottom: 99%;
+    }
+
+/* ------------  */
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      margin: auto;
+      left: 16%;
+      bottom: 99%;
+    }
+  
+    /*circulos del logo*/
+    .double1, .double2 {
+      width: 60%;
+      height: 60%;
+      border-radius: 50%;
+      background-color:  #01f49a;
+      opacity: 0.6;
+      position: absolute;
+      top: 65px;
+      left: 63px;
+  
+      -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+      animation: sk-bounce 2.0s infinite ease-in-out;
+    }
+  
+    .double22 {
+      -webkit-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+    }
+  
+    /*animacion de rebote*/
+    @-webkit-keyframes sk-bounce {
+      0%, 100% { -webkit-transform: scale(0.0) }
+      50% { -webkit-transform: scale(1.0) }
+    }
+  
+    @keyframes sk-bounce {
+      0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+      } 50% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+        }
+    }
+    /*arco exterior*/
+    .arco {
+      position: absolute;
+      border: 5px solid white;
+      border-radius: 50%;
+      height: 100px;
+      opacity: 0.8;
+      width: 100px;
+      border-bottom-color: transparent;
+      animation: lds-circle 4s infinite;
+    }
+    .arco3 {
+      position: absolute;
+      border-radius: 50%;
+      border:5px solid white;
+      background:transparent;
+      height: 40px;
+      width: 40px;
+      opacity: 1;
+      margin-left: 4px;
+      margin-top: 46px;
+      border-left-color: transparent;
+      border-top-color: transparent;
+      transform: rotate(11deg);
+    }
+    .circle{
+      border-radius: 50%;
+      border: 7px solid white;
+      opacity: 0.8;
+      background:transparent;
+      position: absolute;
+      height: 26px;
+      width: 26px;
+      left: 62px;
+      top: 64px;
+    }
+    .bottom {
+      width: 40px;
+      height: 40px;
+      -moz-border-radius: 37%;
+      -webkit-border-radius: 37%;
+      border-radius: 37%;
+      position: absolute;
+      top: 17px;
+      left: 27px;
+      transform: rotate(45deg);
+      opacity: 0.8;
+      -moz-box-shadow: 8px 8px 0 white;
+      -webkit-box-shadow: 8px 8px 0 white;
+      box-shadow: 8px 8px 0 white;
+    }
+  
+    .up{
+      position: relative;
+      width: 72%;
+      height: 50%;
+      border-radius: 50%;
+      border:7px solid white;
+      opacity: 0.8;
+      top:  17px;
+      left: 34px;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+    }
+  
+    .right{
+      background: transparent;
+      position: absolute;
+      width: 55px;
+      height: 36px;
+      border-radius: 50%;
+      border: 7px solid white;
+      opacity: 0.8;
+      border-top-color: transparent;
+      border-right-color:transparent;
+      top: 28px;
+      left: 14px;
+      transform: rotate(45deg);
+    }
+  
+    .left{
+      background: transparent;
+      position: absolute;
+      width: 56px;
+      height: 36px;
+      border-radius: 50%;
+      border: 7px solid white;
+      opacity: 0.8;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      top:28px;
+      left: 25px;
+      transform: rotate(-43deg);
+    }
+    @keyframes lds-circle {
+      0% {
+        transform: rotateY(0deg);
+      }
+      50% {
+        transform: rotateY(720deg);
+      }
+      100% {
+        transform: rotateY(1440deg);
+      }
+    }
+  
+    .selectView {
+      padding-left: 17px;
+      opacity: .5;
+    }
+  
+

@@ -1,0 +1,105 @@
+:root {
+    --clr-primary-300: #f3eed9;
+    --clr-primary-400: #824936;
+    --clr-neutral-100: #fff;
+    --clr-neutral-900: #222c2a;
+    --ff-primary: 'Balsamiq Sans', cursive;
+}
+
+::before, 
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    font-weight: 900;
+    color: var(--clr-primary-400);
+}
+
+h2,
+h3,
+p {
+    margin-bottom: 1em;
+}
+
+header,
+section {
+    padding: 3rem 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    margin-inline: auto; /* left and right only */
+    width: min(90%, 70.5rem);
+}
+
+.container-narrow {
+    max-width: 30rem;
+}
+
+.bg-light {
+    background-color: var(--clr-primary-300);
+}
+
+.bg-dark {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-400);
+}
+
+.bg-accent {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-neutral-900);
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.bg-dark h2,
+.bg-accent h2 {
+    color: var(--clr-neutral-100);
+    padding-top: 2rem;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 40em) {
+    .split {
+        flex-direction: row;
+    }
+
+    .split > * {
+        flex-basis: 100%;   /* all the children of split */
+    }
+
+    .split > * + * {  /* select any element that has a sibling before it */
+        margin-left: 2em;
+    }
+
+}

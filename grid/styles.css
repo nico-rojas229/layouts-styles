@@ -1,0 +1,42 @@
+
+body {
+    font-family: 'DM Mono', monospace;
+    color: #fff;
+    background-color: rgb(19, 19, 19);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    font-size: 3rem;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 500ms;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px .15rem .5rem,
+    rgba(2, 8, 20, 0.1) 0px .075rem .175rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px .35em 1.17em,
+    rgba(2, 8, 20, 0.08) 0px .175em .5rem;
+    transform: translateY(-3px) scale(1.1); 
+}
+
+.card-content {
+    height: 100%;
+    width: 100%;
+    background: transparent; 
+}
+
+.card-content:hover {
+    background: turquoise;
+}

@@ -1,0 +1,110 @@
+:root {
+    --clr-bg: #070807; 
+    --clr-neon: #17dc24;
+    --clr-neon-pink: hsl(317 100% 54%);
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--clr-bg);
+    display: grid;
+    place-items: center;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10rem;
+    gap: 1rem;
+    background: var(--clr-neon);
+}
+
+.sector {
+    height: 20vh;
+    width: 20vh;
+    background: var(--clr-bg);
+    position: relative;
+}
+
+@media screen and (max-width: 600px){
+    .sector {
+        height: 5rem;
+        width: 5rem; 
+    }
+}
+
+.sector:nth-child(1) {
+    box-shadow: inset -16px -15px 21px -13px rgba(23,220,36,0.91);
+}
+
+.sector:nth-child(2) {
+    box-shadow: inset -16px -15px 21px -13px rgba(23,220,36,0.91),
+    inset 28px -27px 28px -25px rgba(23,220,36,0.91);
+}
+
+.sector:nth-child(3) {
+    box-shadow: inset 27px -30px 28px -25px rgba(23,220,36,0.91);
+}
+
+.sector:nth-child(4) {
+    box-shadow: inset -16px -15px 21px -13px rgba(23,220,36,0.91),
+    inset -26px 28px 28px -25px rgba(23,220,36,0.91);
+}
+
+.sector:nth-child(5) {
+    box-shadow: inset -16px -15px 21px -13px rgba(23,220,36,0.91),
+    inset 28px 26px 28px -25px rgba(23,220,36,0.91);
+}
+
+.sector:nth-child(6) {
+    box-shadow: inset 30px 29px 28px -25px rgba(23,220,36,0.91),
+    inset 30px -28px 28px -25px rgba(23,220,36,0.91);
+}
+
+.sector:nth-child(7) {
+    box-shadow: inset -29px 27px 28px -25px rgba(23,220,36,0.91);
+}
+
+.sector:nth-child(8) {
+    box-shadow:  inset 28px 26px 28px -25px rgba(23,220,36,0.91),
+    inset -28px 26px 28px -25px rgba(23,220,36,0.91);
+}
+
+.sector:last-child {
+    box-shadow: inset 27px 27px 28px -25px rgba(23,220,36,0.91);
+}
+
+.circle {
+    margin-left: 19%;
+    margin-top: 15%;
+    width: 50%;
+    height: 50%;
+    border: var(--clr-neon) 0.55rem solid;
+    border-radius: 50%;
+}
+
+.x {
+    margin-left: 49%;
+    margin-top: 13%;
+    width: 0.55rem;
+    height: 70%;
+    position: relative;
+    background: var(--clr-neon-pink);
+    transform: rotate(43deg);
+}
+
+.x::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-neon-pink);
+    transform: rotate(97deg);
+}
+

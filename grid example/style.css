@@ -1,0 +1,58 @@
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    grid-template-rows: minmax(100px, auto);
+}
+
+.grid > div {
+    background: tomato;
+    padding: 1em;
+}
+
+.grid > div:hover {
+    border: 1px yellowgreen solid;
+}
+
+.nested-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    gap: 1em;
+}
+
+.nested-grid > div {
+    background: turquoise;
+    border: 1px yellowgreen solid;
+    padding: 1em;
+}
+
+.element {
+    grid-column: 1/4; /* el elemento abarca desde la linea 1 hasta la linea 4 */
+}
+
+
+/* captureOnClose() {
+        const stompOnClose = this.stompClient.ws.onClose;
+        this.stompClient.ws.onclose = function() {
+            console.log("Websocket se desconecto");
+            
+        };
+    }
+
+    async alertica() {
+        const alert = await this.alertController.create({
+            header: this.translate.instant('important'),
+            subHeader: 'se desconecto del ws',
+            message: 'se desconecto del ws',
+            backdropDismiss: false,
+            buttons: [{
+                text: this.translate.instant('Accept'),
+                handler: () => {
+                    this.alertController.dismiss();
+                }
+            }],
+            cssClass: 'alert-class alertCustom'
+        })
+    } */

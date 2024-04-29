@@ -1,0 +1,139 @@
+:root {
+    --bg-color-primary: #581845;
+    --bg-color-secondary: #c70039;
+    --bg-color-medium: #c70039;
+    --bg-color-neutral: #fff;
+    --bg-color-contrast: #ffc300;
+    --font-primary: 'Balsamiq Sans', cursive;
+}
+
+::before,
+::after {
+   box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    justify-content: center;
+    font-family: var(--font-primary);
+    background: linear-gradient(90deg, #c70039, #ffc300) ;
+}
+
+.title h1 {
+    text-align: center;
+    color: var(--bg-color-neutral);
+}
+
+.container {
+    width: 70vw;
+    height: 230vh;
+    background: var(--bg-color-neutral);
+    margin-top: 2rem;
+}
+
+header {
+    width: 100%;
+    height: 5rem;
+    background: var(--bg-color-primary);
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding-left: 2rem;
+    color: #fff;
+}
+
+.aside-section {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: auto;
+    
+}
+
+.section-left {
+    background: var(--bg-color-neutral);
+    height: 100%;
+    
+}
+
+.section-right .aside-border {
+    background: var(--bg-color-secondary);
+    display: grid;
+    color: var(--bg-color-neutral);
+}
+
+
+.aside-border {
+    border: var(--bg-color-primary) 0.175rem solid;
+    height: 100%;
+    margin-top: 2rem;
+    padding: 2rem;
+    display: grid;
+    justify-content: center;
+}
+
+.card {
+    color: #fff;
+    background: var(--bg-color-secondary);
+    width: auto;
+    height: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+.small-card {
+    background: var(--bg-color-medium);
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.small-card:hover {
+    background: linear-gradient(90deg, #c70039, #ffc300) ;
+    transition: 500ms ease;
+}
+
+.image-container img {
+    display: block;
+    width: 90%;
+    height: 80%;
+}
+
+footer {
+    background: var(--bg-color-primary);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--bg-color-neutral);
+}
+
+@media screen and (max-width: 1130px) {
+
+    .section-left, .section-right, .cards-section > .small-card {
+        display: grid;
+        grid-column: 1/ -1;
+    }
+}
+
+
+/* grid-column: 1 / 6 */
+/* grid-column: span 2 */
+
+
